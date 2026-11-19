@@ -1,0 +1,29 @@
+{
+  "name": "@blankblitz/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env PORT=3001 tsx watch --clear-screen=false src/index.ts",
+    "start": "cross-env NODE_ENV=production tsx src/index.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "cross-env NODE_ENV=test vitest run"
+  },
+  "dependencies": {
+    "@blankblitz/shared": "0.1.0",
+    "cross-env": "^7.0.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jose": "^6.2.18",
+    "socket.io": "^4.8.1",
+    "tsx": "^4.20.0",
+    "word-list": "^4.1.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "socket.io-client": "^4.8.1",
+    "vitest": "^4.0.0"
+  }
+}

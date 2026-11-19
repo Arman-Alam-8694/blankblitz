@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+
+# Production and build output
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+.npmrc
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite cache
+.vite/
+
+# Testing and coverage
+coverage/
+.nyc_output/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.iml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local runtime and debugging files
+*.pid
+*.pid.lock
+*.seed
+.cache/

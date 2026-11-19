@@ -1,0 +1,17 @@
+# Render Blueprint: one free web service runs the API, WebSockets, voice relay and the built frontend.
+# Render dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: blankblitz
+    runtime: node
+    plan: free
+    # --include=dev: Vite (a devDependency) is needed to build the frontend.
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: TRUST_PROXY
+        value: "1"
+      - key: NODE_VERSION
+        value: "22"
